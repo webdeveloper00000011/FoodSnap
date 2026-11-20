@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-cream: #FAF6EE;
+  --color-cream-card: #FFFDF9;
+  --color-cream-muted: #F2ECE0;
+  --color-cream-border: #E5DCCB;
+
+  --color-ink: #1C221E;
+  --color-ink-muted: #556057;
+
+  --color-apricot-50: #FFF4EC;
+  --color-apricot-100: #FDE5D4;
+  --color-apricot-200: #FACAA8;
+  --color-apricot-400: #F28C52;
+  --color-apricot-500: #E06528;
+  --color-apricot-600: #C4511A;
+  --color-apricot-900: #6B290B;
+
+  --color-sage-50: #F1F8F2;
+  --color-sage-100: #DCEFE0;
+  --color-sage-200: #BBE0C3;
+  --color-sage-400: #7EC48E;
+  --color-sage-600: #3D8A51;
+  --color-sage-800: #1E5631;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background-color: var(--color-cream);
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(242, 140, 82, 0.10) 0%, transparent 42%),
+      radial-gradient(circle at 88% 18%, rgba(126, 196, 142, 0.12) 0%, transparent 44%);
+    background-attachment: fixed;
+    color: var(--color-ink);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.card-soft-shadow {
+  box-shadow:
+    0 1px 2px rgba(28, 34, 30, 0.04),
+    0 12px 32px -12px rgba(107, 41, 11, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

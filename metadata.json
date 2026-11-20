@@ -1,0 +1,6 @@
+{
+  "name": "FoodSnap",
+  "description": "Mobile-friendly AI food recognition app that identifies dishes, lists possible ingredients, estimates nutrition, and keeps a scan history.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
